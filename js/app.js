@@ -33,12 +33,27 @@ document.addEventListener('DOMContentLoaded', function() {
                             let c= numbers2[k].innerHTML;
                             console.log(c);
 
-                            //wynik
-                            let equals= document.querySelector('.equals');
-                            equals.addEventListener('click', function() {
-                                console.log('equals');
-                                document.querySelector('.result').value= a + b + c;
-                            })
+                            //dzielenie przez 0
+                            if (b == '/' && c == 0) {
+                                alert('dividing by 0...');
+                                document.querySelector('.result').value= "";
+                            }   else {
+
+                                    //wynik
+                                    let equals= document.querySelector('.equals');
+                                    equals.addEventListener('click', function() {
+                                        console.log('=');
+                                        document.querySelector('.result').value= eval(a + b + c);
+                                        console.log(eval(a + b + c));
+
+                                        //C
+                                        let erase= document.querySelector('.erase');
+                                        erase.addEventListener('click', function() {
+                                            console.log('C');
+                                            document.querySelector('.result').value= "";
+                                        })
+                                    })
+                                }
                         }
                     }        
                 }
