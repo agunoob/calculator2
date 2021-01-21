@@ -31,7 +31,15 @@ body {
     padding: 0;
     margin: 5px;
     height: 45px;
-    width: 210px;
+    width: 180px;
+}
+
+.Xerase {
+    position: absolute;
+    height: 45px;
+    width: 25px;
+    top: 55px;
+    left: 340px;
 }
 
 .btns-oper{

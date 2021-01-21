@@ -1,42 +1,46 @@
 <!DOCTYPE>
 <html>
     <head>
-        <title>calculator2</title>
+        <title>calculator3</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script src="js/app.js"></script>
     </head>
     <body>
         <div class="calculator">
             <div>
                 <input class="result" id="a" placeholder="0" type="text">
             </div>
+            <div>
+                <button class="Xerase" onclick="Xerase()">x</button>
+            </div>
             <div class="btns-oper">
                 <div> 
-                    <button class="erase">c</button>
+                    <button class="erase" onclick="erase()">c</button>
                 </div>
                 <div>
-                    <button class="equals">=</button>
+                    <button class="equals" onclick="equals()">=</button>
                 </div>
                 <div>
-                    <button class="operations sum-op">+</button>
-                    <button class="operations sub-op">-</button>
-                    <button class="operations multi-op">*</button>
-                    <button class="operations div-op">/</button>
+                    <button class="operations sum-op" onclick="sum()">+</button>
+                    <button class="operations sub-op" onclick="sub()">-</button>
+                    <button class="operations multi-op" onclick="multi()">*</button>
+                    <button class="operations div-op" onclick="div()">/</button>
                 </div>
             </div>    
         </div>
         <div class="keyboard">
-            <button class="numbers one">1</button>
-            <button class="numbers two">2</button>
-            <button class="numbers three">3</button>
-            <button class="numbers four">4</button>
-            <button class="numbers five">5</button>
-            <button class="numbers six">6</button>
-            <button class="numbers seven">7</button>
-            <button class="numbers eight">8</button>
-            <button class="numbers nine">9</button>
-            <button class="numbers zero">0</button>
+            <button class="numbers" onclick="liczby(1)">1</button>
+            <button class="numbers" onclick="liczby(2)">2</button>
+            <button class="numbers" onclick="liczby(3)">3</button>
+            <button class="numbers" onclick="liczby(4)">4</button>
+            <button class="numbers" onclick="liczby(5)">5</button>
+            <button class="numbers" onclick="liczby(6)">6</button>
+            <button class="numbers" onclick="liczby(7)">7</button>
+            <button class="numbers" onclick="liczby(8)">8</button>
+            <button class="numbers" onclick="liczby(9)">9</button>
+            <button class="numbers zero" onclick="liczby(0)">0</button>
         </div>
+        <script src="js/app.js"></script>
+        <!-- ?!!!tutaj JS!!!? -->
     </body>
 </html>
