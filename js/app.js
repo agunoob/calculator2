@@ -2,18 +2,17 @@
 
 let numbers = document.querySelectorAll('.numbers');
 let result = document.querySelector('.result');
+let history = document.querySelector('.history-input');
 let a= '';
 let b= null;
 let c= '';
 
 //zmienna a i c
 function liczby(cyfra) {
-    if ( b === null && c === '') {
+    if ( !b) {
         console.log(cyfra);
         a+= cyfra;
         result.value = a;
-        console.log('a:', a, 'b:', b, 'c:', c);
-        return;
     // } else if (function equals()) {
     //     a+= cyfra;
     //     result.value = a;
@@ -25,9 +24,8 @@ function liczby(cyfra) {
         console.log(cyfra);
         c+= cyfra;
         result.value = c;
-        console.log('a:', a, 'b:', b, 'c:', c);
-        return;
     }
+    console.log('a:', a, 'b:', b, 'c:', c);
 }
 
 //zmienna b
@@ -60,6 +58,7 @@ function equals() {
     console.log('=');
     result.value = '= ' + eval( a + b + c);
     console.log(eval(a+b+c) ,'a:', a, 'b:', b, 'c:', c);
+    history.value += a + b + c + '= ' + eval( a + b + c);
 }
 
 //C
@@ -71,9 +70,30 @@ function erase() {
     console.log('a:', a, 'b:', b, 'c:', c);
 }
 
-//Xerase
+// //Xerase
+// function Xerase() {
+//     let l= result.value.slice(0, -1);
+//     console.log(l);
+//     a = l
+//     result.value=l;
+// }
+
 function Xerase() {
     let l= result.value.slice(0, -1);
-    console.log(l);
-    result.value=l;
+    if (!b) {
+        a = l;
+        result.value = l;
+    // } else if (function equals()) {
+    //     a+= cyfra;
+    //     result.value = a;
+    //     console.log('a:', a, 'b:', b, 'c:', c);
+    //     b = null;
+    //     c = '';
+    //     return;
+    } else {
+        c= l;
+        result.value = l
+    }
+    console.log('a:', a, 'b:', b, 'c:', c);
 }
+

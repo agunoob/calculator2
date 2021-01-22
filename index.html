@@ -7,40 +7,34 @@
     </head>
     <body>
         <div class="calculator">
-            <div>
-                <input class="result" id="a" placeholder="0" type="text">
+            <input class="result" id="a" placeholder="0" type="text">
+            <div class="keyboard">
+                <button class="numbers zero" onclick="liczby(0)">0</button>
+                <button class="numbers" onclick="liczby(1)">1</button>
+                <button class="numbers" onclick="liczby(2)">2</button>
+                <button class="numbers" onclick="liczby(3)">3</button>
+                <button class="numbers" onclick="liczby(4)">4</button>
+                <button class="numbers" onclick="liczby(5)">5</button>
+                <button class="numbers" onclick="liczby(6)">6</button>
+                <button class="numbers" onclick="liczby(7)">7</button>
+                <button class="numbers" onclick="liczby(8)">8</button>
+                <button class="numbers" onclick="liczby(9)">9</button>
             </div>
-            <div>
-                <button class="Xerase" onclick="Xerase()">x</button>
+            <div class="oper">
+                <button class="operations sum-op" onclick="sum()">+</button>
+                <button class="operations sub-op" onclick="sub()">-</button>
+                <button class="operations multi-op" onclick="multi()">*</button>
+                <button class="operations div-op" onclick="div()">/</button>
             </div>
-            <div class="btns-oper">
-                <div> 
-                    <button class="erase" onclick="erase()">c</button>
-                </div>
-                <div>
-                    <button class="equals" onclick="equals()">=</button>
-                </div>
-                <div>
-                    <button class="operations sum-op" onclick="sum()">+</button>
-                    <button class="operations sub-op" onclick="sub()">-</button>
-                    <button class="operations multi-op" onclick="multi()">*</button>
-                    <button class="operations div-op" onclick="div()">/</button>
-                </div>
-            </div>    
+            <div class="erase-equals">
+                <button class="erase" onclick="erase()">c</button>
+                <button class="Xerase" onclick="Xerase()"><img src="../kalkulator2/backspace.png" class="image" alt="cos"></button>
+                <button class="equals" onclick="equals()">=</button>
+            </div>   
         </div>
-        <div class="keyboard">
-            <button class="numbers" onclick="liczby(1)">1</button>
-            <button class="numbers" onclick="liczby(2)">2</button>
-            <button class="numbers" onclick="liczby(3)">3</button>
-            <button class="numbers" onclick="liczby(4)">4</button>
-            <button class="numbers" onclick="liczby(5)">5</button>
-            <button class="numbers" onclick="liczby(6)">6</button>
-            <button class="numbers" onclick="liczby(7)">7</button>
-            <button class="numbers" onclick="liczby(8)">8</button>
-            <button class="numbers" onclick="liczby(9)">9</button>
-            <button class="numbers zero" onclick="liczby(0)">0</button>
+        <div class="history">
+            <input class="history-input" id="b" placeholder="0" type="text">
         </div>
         <script src="js/app.js"></script>
-        <!-- ?!!!tutaj JS!!!? -->
     </body>
 </html>
