@@ -6,6 +6,9 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
+        <div class="show">
+            <p></p>
+        </div>
         <div class="calculator">
             <input class="result" id="a" placeholder="0" type="text">
             <div class="keyboard">
@@ -27,14 +30,14 @@
                 <button class="operations div-op" onclick="div()">/</button>
             </div>
             <div class="erase-equals">
-                <button class="erase" onclick="erase()">c</button>
-                <button class="Xerase" onclick="Xerase()"><img src="../kalkulator2/backspace.png" class="image" alt="cos"></button>
-                <button class="equals" onclick="equals()">=</button>
+                <button class="er-eq erase" onclick="erase()">c</button>
+                <button class="er-eq Xerase" onclick="Xerase()"><img src="../kalkulator2/backspace.png" class="image-backspace"></button>
+                <button class="er-eq equals" onclick="equals()">=</button>
             </div>   
         </div>
-        <div class="history">
-            <input class="history-input" id="b" placeholder="0" type="text">
+        <div class="history"> 
         </div>
         <script src="js/app.js"></script>
+        <button class="refresh" onclick="refresh()"><img src="../kalkulator2/refresh.png" class="image-refresh"></button>
     </body>
 </html>

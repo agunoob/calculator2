@@ -2,10 +2,12 @@
 
 let numbers = document.querySelectorAll('.numbers');
 let result = document.querySelector('.result');
-let history = document.querySelector('.history-input');
+let history = document.querySelector('.history');
+let show = document.querySelector('p');
 let a= '';
 let b= null;
 let c= '';
+
 
 //zmienna a i c
 function liczby(cyfra) {
@@ -58,7 +60,15 @@ function equals() {
     console.log('=');
     result.value = '= ' + eval( a + b + c);
     console.log(eval(a+b+c) ,'a:', a, 'b:', b, 'c:', c);
-    history.value += a + b + c + '= ' + eval( a + b + c);
+    let historyElement = document.createElement("span");
+    historyElement.innerText = `${a} ${b} ${c} = ${eval(a+b+c)}`;
+    console.log(historyElement);
+    // history.appendChild(historyElement);
+    history.insertBefore(historyElement, history.firstChild);
+    show.innerHTML = a + b + c + '= ' + eval( a + b + c);
+    historyElement.onclick = function() {
+        show.innerHTML=historyElement.innerText;
+    }
 }
 
 //C
@@ -69,14 +79,6 @@ function erase() {
     c = '';
     console.log('a:', a, 'b:', b, 'c:', c);
 }
-
-// //Xerase
-// function Xerase() {
-//     let l= result.value.slice(0, -1);
-//     console.log(l);
-//     a = l
-//     result.value=l;
-// }
 
 function Xerase() {
     let l= result.value.slice(0, -1);
@@ -97,3 +99,6 @@ function Xerase() {
     console.log('a:', a, 'b:', b, 'c:', c);
 }
 
+function refresh() {
+    history.innerHTML= '';
+}

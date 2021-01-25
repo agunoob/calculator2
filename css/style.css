@@ -2,52 +2,105 @@ body {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    background-color: black;
+    background: linear-gradient(to bottom right, lightgrey, rgb(141, 179, 182), black);
 }
 
 .calculator {
     position: relative;
     top: 40px;
-    left: 80px;
-    background-color: grey;
+    left: 350px;
+    border: solid 10px rgb(63, 63, 63);
+    background-color: rgb(63, 63, 63);
     height: 500px;
     width: 300px;
     margin: 0px;
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 5px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 70px 348px 80px;
+    grid-template-columns: 225px 75px;
+    grid-template-areas: "eq eq"
+    "num ope"
+    "ereq ereq";
 }
 
-.history-input {
+.history {
+    margin: 0px;
     position: absolute;
     top: 40px;
-    left: 450px;
-    background-color: rgb(219, 219, 219);
-    height: 500px;
-    width: 300px;
+    left: 700px;
+    background: linear-gradient(to bottom right, rgb(193, 249, 253), rgb(141, 179, 182));
+    height: 450px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    border: solid 10px rgb(63, 63, 63);
+    border-radius: 10px;
+}
+
+.show{
+    margin: 0px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background: linear-gradient(to bottom right, rgb(193, 249, 253), rgb(141, 179, 182));
+    height: 50px;
+    width: 250px;
+    border: solid 10px rgb(63, 63, 63);
+    border-radius: 10px;
+}
+
+p{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+    color: rgb(58, 58, 58);
+    left: 5px;
+    top: 10px;
+    letter-spacing: 2.4px;
+    line-height: 1.2;
 }
 
 .result {
-    background-color: rgb(219, 219, 219);
-    height: 60px;
-    width: 290px;
-    font-size: 25px;
+    background: linear-gradient(to bottom right, rgb(193, 249, 253), rgb(141, 179, 182));
+    font-size: 30px;
+    grid-area: eq;
+    border-color: lightgrey;
+}
+
+.operations {
+    grid-area: ope;
 }
 
 button {
-    height: 60px;
-    width: 70px;
+    margin: 0px;
     font-size: 25px;
+    background-color: rgb(128, 128, 128);
+    color: white;
+    font-weight: 100;
+    box-shadow: 2px 3px rgb(29, 29, 29);
+    border: solid 1px rgb(19, 19, 19);
+    border-radius: 3px;
 }
 
 button:hover{
-    background-color: rgb(82, 82, 82);
+    background-color: rgb(71, 71, 71);
+    border: solid 1px rgb(19, 19, 19);
+    box-shadow: none;
+    border-radius: 3px;
 }
 
 .keyboard {
-    background-color: lightgrey;
+    background-color: rgb(63, 63, 63);
+    /* display: flex;
+    flex-wrap: wrap; */
 }
-.image {
+
+.oper {
+    background-color: rgb(63, 63, 63);
+}
+
+.image-backspace {
     margin: -4px;
     width: 25px;
 }
@@ -56,10 +109,54 @@ button:hover{
     background-color: red;
 }
 
-/* .erase-equals {
- display: flex;
-} */
-
 .equals {
     background-color: teal;
+}
+
+.image-refresh {
+    width: 25px;
+}
+
+.refresh {
+    margin: 0px;
+    padding: 0px;
+    width: 250px;
+    height: 46px;
+    position: absolute;
+    top: 510px;
+    left: 710px;
+    border: solid 1px rgb(19, 19, 19);
+    box-shadow: 2px 3px rgb(29, 29, 29);
+    border-radius: 3px;
+}
+
+span {
+    font-size: 20px;
+    color: rgb(58, 58, 58);
+    position: relative;
+    left: 10px;
+    top: 10px;
+    letter-spacing: 2.4px;
+    line-height: 1.2;
+}
+
+.erase-equals {
+    background-color: rgb(63, 63, 63);
+    grid-area: ereq;
+}
+
+.numbers {
+    height: 55px;
+    width: 65px;
+    grid-area: num;
+    /* flex: 1; */
+}
+
+.zero {
+    /* flex: 3; */
+}
+
+button .numbers, .operations, .er-eq {
+    height: 55px;
+    width: 65px;
 }
