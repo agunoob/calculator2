@@ -92,12 +92,10 @@ button:hover{
 
 .keyboard {
     background-color: rgb(63, 63, 63);
-    /* display: flex;
-    flex-wrap: wrap; */
-}
-
-.oper {
-    background-color: rgb(63, 63, 63);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .image-backspace {
@@ -143,20 +141,34 @@ span {
 .erase-equals {
     background-color: rgb(63, 63, 63);
     grid-area: ereq;
-}
-
-.numbers {
-    height: 55px;
-    width: 65px;
-    grid-area: num;
-    /* flex: 1; */
-}
-
-.zero {
-    /* flex: 3; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 button .numbers, .operations, .er-eq {
-    height: 55px;
-    width: 65px;
+    height: 75px;
+    width: 72px;
+}
+
+.numbers {
+    height: 75px;
+    width: 72px;
+    grid-area: num;
+}
+
+.zero {
+    flex-grow: 3;
+}
+
+.equals {
+    flex-grow: 2;
+}
+
+.oper {
+    background-color: rgb(63, 63, 63);
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
